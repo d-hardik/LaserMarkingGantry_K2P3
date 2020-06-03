@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "LaserMarking_K2P3_V1", "LaserMarking_K2P3_V1\LaserMarking_K2P3_V1.tsproj", "{A4B9AC0C-D8D7-4C81-ABB0-005599F472A5}"
 EndProject
+Project("{FD9F1D59-E000-42F3-8744-88DE1BE93C06}") = "NC_Jerk_Analysis", "NC_Jerk_Analysis\NC_Jerk_Analysis.tcmproj", "{C5234441-0196-497F-BEC0-13E192BB83BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|TwinCAT CE7 (ARMV7) = Debug|TwinCAT CE7 (ARMV7)
@@ -49,6 +51,14 @@ Global
 		{CD65A006-5C88-4874-B4F3-BF78A11E0818}.Release|TwinCAT RT (x64).Build.0 = Release|TwinCAT RT (x64)
 		{CD65A006-5C88-4874-B4F3-BF78A11E0818}.Release|TwinCAT RT (x86).ActiveCfg = Release|TwinCAT RT (x86)
 		{CD65A006-5C88-4874-B4F3-BF78A11E0818}.Release|TwinCAT RT (x86).Build.0 = Release|TwinCAT RT (x86)
+		{C5234441-0196-497F-BEC0-13E192BB83BA}.Debug|TwinCAT CE7 (ARMV7).ActiveCfg = Debug|TwinCAT CE7 (ARMV7)
+		{C5234441-0196-497F-BEC0-13E192BB83BA}.Debug|TwinCAT OS (ARMT2).ActiveCfg = Debug|TwinCAT OS (ARMT2)
+		{C5234441-0196-497F-BEC0-13E192BB83BA}.Debug|TwinCAT RT (x64).ActiveCfg = Debug|TwinCAT RT (x64)
+		{C5234441-0196-497F-BEC0-13E192BB83BA}.Debug|TwinCAT RT (x86).ActiveCfg = Debug|TwinCAT RT (x86)
+		{C5234441-0196-497F-BEC0-13E192BB83BA}.Release|TwinCAT CE7 (ARMV7).ActiveCfg = Release|TwinCAT CE7 (ARMV7)
+		{C5234441-0196-497F-BEC0-13E192BB83BA}.Release|TwinCAT OS (ARMT2).ActiveCfg = Release|TwinCAT OS (ARMT2)
+		{C5234441-0196-497F-BEC0-13E192BB83BA}.Release|TwinCAT RT (x64).ActiveCfg = Release|TwinCAT RT (x64)
+		{C5234441-0196-497F-BEC0-13E192BB83BA}.Release|TwinCAT RT (x86).ActiveCfg = Release|TwinCAT RT (x86)
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

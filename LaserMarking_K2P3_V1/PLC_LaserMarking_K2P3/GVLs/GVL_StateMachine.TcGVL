@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <GVL Name="GVL_StateMachine" Id="{638e3bbc-2378-49e8-9f75-37fe25386f57}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+
+//*********Machine Status Variables ***********
+
+Machine_Auto  :  BOOL;    //System is Operating in Auto Mode
+Machine_Manual  :  BOOL;    //System is Operating in Auto mode
+Machine_Stop  :  BOOL;    //System is in Stop Mode
+
+//*********State Machine Status Variables ***********
+
+Auto_State_Macine  		:  eAuto_State_Macine := Auto_Stop_State;    		//Auto State Machine
+Manual_State_Machine  	:  eManual_State_Machine := Manual_Stop_State;    	//Manual State Machine
+MC_State_Machine  		:  eMC_State_Machine := MC_Reset;    				//MC1 State Machine
+LM_State  				:  eLM_State_Machine := LM_Off;    					//Laser Marking TCP Communication State Machine
+
+//********* MC Status Variables ***********
+
+MC_Ready  			:  BOOL := FALSE;    //MC_State machine is On, and Ready without errors.
+MC_Home_Done  		:  BOOL := FALSE;    //MC_HOME is Done, no need to do again
+MC_MoveMentDone  	:  BOOL := FALSE;    //Done Requested Movement for this NMC
+
+//********* Laser Machine Status Variables ***********
+
+LM_PrintDataSent  	:  BOOL := FALSE;    //Data to Mark has been sent. mark command pending
+LM_PrintCmdSent  	:  BOOL := FALSE;    //Mark Command has been sent. Feedback Pending
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

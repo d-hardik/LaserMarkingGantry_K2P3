@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <EnumerationTextList Name="eUniquenessMethos" Id="{7108ee47-dee7-4a4c-87bf-3e260805d227}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE eUniquenessMethos :
+(
+		PartCode 				:= 0 ,  //Machine ID and Partcode from Machine, Date and Time from PC
+		PartCode_DateTime 		:= 1 ,  //Machine ID, Partcode,Date time from Machine. nothing from PC
+		PartCode_LPC 			:= 2 ,  //Machine ID, Lifelong Production Count from Machine (9 Digit)
+		WorkOrderNo_QtyCount	:= 3    //ERP WO Number with it's Qty count
+
+);
+END_TYPE
+]]></Declaration>
+    <XmlArchive>
+      <Data>
+        <o xml:space="preserve" t="TextListEnumerationTextListObject">
+          <l n="TextList" t="ArrayList" cet="TextListRow">
+            <o>
+              <v n="TextID">"PartCode"</v>
+              <v n="TextDefault">"0"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"PartCode_DateTime"</v>
+              <v n="TextDefault">"1"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"PartCode_LPC"</v>
+              <v n="TextDefault">"2"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"WorkOrderNo_QtyCount"</v>
+              <v n="TextDefault">"3"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">""</v>
+              <v n="TextDefault">""</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+          </l>
+          <l n="Languages" t="ArrayList" />
+          <v n="GuidInit">{0cc6a57a-e143-4b7e-a4ee-051a3e4c02d6}</v>
+          <v n="GuidReInit">{f9c0ddca-54b5-4202-a9f7-900473315e0b}</v>
+          <v n="GuidExitX">{b0dfb3b8-a5cc-4963-beaa-9e86b9028118}</v>
+        </o>
+      </Data>
+      <TypeList>
+        <Type n="ArrayList">System.Collections.ArrayList</Type>
+        <Type n="Guid">System.Guid</Type>
+        <Type n="String">System.String</Type>
+        <Type n="TextListEnumerationTextListObject">{4b60233c-f940-4beb-b331-82133b520151}</Type>
+        <Type n="TextListRow">{53da1be7-ad25-47c3-b0e8-e26286dad2e0}</Type>
+      </TypeList>
+    </XmlArchive>
+  </EnumerationTextList>
+</TcPlcObject>

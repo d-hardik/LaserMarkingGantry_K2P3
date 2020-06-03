@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <GVL Name="GVL_LaserMarking_MC_Parameters" Id="{0fc463a7-61bd-4110-9b50-a5069718e58c}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+
+//Master Parameters
+
+LM_MachineID  			:  UINT := 1;    					//
+LM_Type  				:  eMarking_Types := DataMatrix_2D;	//Type of Value to Mark
+LM_UniqueTec  			:  eUniquenessMethos := PartCode; 	//Uniqueness Method
+
+
+//Connection Parameters
+
+LM_Con_IP_Hostname  	:  BOOL := FALSE;    				//0- IP address, 1-HostName
+LM_IP_Adr  				:  STRING[256] := '172.26.1.181';  	//Laser Marking PC IP Address
+LM_HostName  			:  STRING[256] := 'FBPC19I0001';  	//Laser Marking PC Hostname Address
+LM_SourceIP_Port  		:  UINT := 9812;    				//Beckhoff PLC Port
+LM_DestinationIP_Port  	:  UINT := 9812;    				//Destination PC Port
+
+LM_Connection_Error  	:  BOOL := TRUE;    //Connection With Laser marking PC Broken
+LM_Con_Rcv_TimeOutTime  :  UINT := 10;    	//Laser Machine post marking request, time allowed for timeout
+LM_Con_Rcv_Size_Data  	:  UINT := 100;    	//Size of Data to receive
+LM_Con_Ready  			:  BOOL;    		//LM Ready State Machine is Ready without any errors
+
+//Marking Values 
+
+LM_Production_Count  	:  ULINT;    						//Long_Production_Count
+LM_Marking_String  		:  STRING[32] := 'GODREJ MACHINE ID, PARTNAME';    //
+LM_WorkOrder_No  		:  STRING[32] := 'PLN00000';    	//
+LM_WorkOrder_Qty_Instance  :  UINT := 1;    				//
+
+// Command Structure
+
+LM_CodeSelection_Enable  	:  BOOL := FALSE;    //If Enable, different different codes can be selected by resetting code selection done bit. if disabled initial value to be contant 
+LM_CodeSelection_Done  		:  BOOL := TRUE;    //If Code selection Enabled, required for resetting current coding method
+LM_ArrCodeType  			:  ARRAY[0..1] OF BYTE := [16#31, 16#5F];    //Code Type Selection Command String to Send (Default walue 1_ in ASCII)
+LM_ArrCodeTypeSize  		:  UINT := 2;    //Size of Code Selection Data
+LM_ArrUniqueVal  			:  ARRAY[0..31] OF BYTE := [16#47, 16#4F, 16#44, 16#52, 16#45, 16#4A, 16#20, 16#44, 16#45, 16#46, 16#41, 16#55, 16#4C, 16#54, 16#20, 16#56, 16#41, 16#4C, 16#55, 16#45, 12(16#0)];    //Unique Value As per Type of Uniqueness Method selected (Default Value : 'GODREJ DEFAULT VALUE' in ASCII)
+LM_ArrUniqueValSize  		:  UINT := 25;    //Size of Unique Value
+LM_ArrMarkCmd  				:  ARRAY[0..1] OF BYTE := [16#5F, 16#4D];    //Marking Command String to send (Default Value _M in ASCII)
+LM_ArrMarkCmdSize  			:  UINT := 2;    //Size of Marking Command
+
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

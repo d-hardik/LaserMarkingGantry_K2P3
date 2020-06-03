@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <GVL Name="GVL_GateWay" Id="{54c82b9d-cbf6-4cde-b738-8512f71cf150}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+
+//*********INPUT Data ***********
+
+ABS_IN_Marking_Command_IX100 	AT%IX10.0  	:  BOOL;    	//AnyBus card Command For start marking 
+ABS_IN_EMERGENCY_IX101 			AT%IX10.1  	:  BOOL;    	//AnyBus card has received emergency signal
+ABS_IN_OutPut_Type_IB00 		AT%IW0  	:  INT;    		//Anybus Type of Output on Conveypor
+ABS_IN_Machine_ID_IB01 			AT%IW10  	:  STRING[15] := 'Godrej Mark'; 	//AnyBus Machine ID
+ABS_IN_PartName_IW00 			AT%IW100  	:  STRING[15] := 'Default Value'; 	//Anybus Name Of Part
+ABS_IN_Cordinate_1_ID00		 	AT%ID0  	:  REAL;    	//Anybus Y Cordinate 1
+ABS_IN_Cordinate_2_ID10 		AT%ID1  	:  REAL;    	//Anybus Y Cordinate 2
+ABS_IN_Cordinate_3_ID20 		AT%ID2  	:  REAL;    	//Anybus Y Cordinate 3
+ABS_IN_Cordinate_4_ID30 		AT%ID3  	:  REAL;    	//Anybus Y Cordinate 4
+
+//*********OUTPUT Data ***********
+
+ABS_Out_Mark_Done_QX100 		AT%QX10.0  	:  BOOL;    	//Anybus Output for Marking Completed 
+ABS_Out_EMG_Stop_QX101 			AT%QX10.1  	:  BOOL;    	//AnyBus Output for Gantry Emergency stop
+ABS_Out_Machine_Healthy_QX102 	AT%QX10.2  	:  BOOL;    	//Anybus Output for Machinein healthy and operating condition
+ABS_Out_Printing_data_Ok_QX103 	AT%QX10.3  	:  BOOL;    	//AnyBus Output for Printing Data OK
+
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

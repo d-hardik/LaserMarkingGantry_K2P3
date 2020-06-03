@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <GVL Name="GVL_AxisParameters" Id="{da0a98cc-5f2c-40bb-8215-c25d4e8a5867}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+	YAxisAutoSpeed  		:  LREAL;    			//
+	YAxisManualSpeed  		:  LREAL;    			//
+	YAxisManualStep  		:  BOOL := FALSE;    	//Step vise movement in Manual Mode
+	YAxisManualStepDistFwd 	:  LREAL := 100;    	//Distance to move in Step mode Forward Movement
+	YAxisManualStepDistRev 	:  LREAL := -100;    	//Distance to move in Step mode Reverse Movement
+	YAxisAcceleration  		:  LREAL := 100;    	//
+	YAxisDeceleration  		:  LREAL := 100;    	//
+	YAxisEmgDeceleration  	:  LREAL := 1000; 	   	//
+	YAxisJerk  :  LREAL 	:= 100;    				//
+	YAxisResetOnStop  		:  BOOL := TRUE;    	//
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
