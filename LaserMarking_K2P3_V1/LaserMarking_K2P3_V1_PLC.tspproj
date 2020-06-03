@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4023.119">
+	<Project ProjectGUID="{7E3BE4C6-BD42-4348-8310-83B6D1CAF046}" Target64Bit="true" ShowHideConfigurations="#x106">
+		<Plc>
+			<Project GUID="{893D40D8-012A-45B0-B16E-7EA87F75AE5D}" Name="LM_K2P3_PLC" PrjFilePath="LM_K2P3_PLC\LM_K2P3_PLC.plcproj" TmcFilePath="LM_K2P3_PLC\LM_K2P3_PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e"/>
+		</Plc>
+	</Project>
+</TcSmProject>

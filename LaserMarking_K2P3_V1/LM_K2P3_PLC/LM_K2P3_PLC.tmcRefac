@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Refactors>
+  <Renames>
+    <RenamedType>
+      <Type guid="e25eff55-c5ba-4395-b8fa-f60a021d8a05">ERRORS_FLAG</Type>
+      <From>Errors</From>
+      <To>Alarm_Flag</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="b0a40348-ce9b-4859-a2d4-228b16920ed2">MANUAL_AUTO_SETUP</Type>
+      <From>Auto_Manual_Setup</From>
+      <To>POU_Manual_Auto</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="bc48d4c2-b908-421e-aea4-4ea2852695f7">SIGNALSTOGATEWAY</Type>
+      <From>SignalsToGateway</From>
+      <To>POU_GatewaySignals</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="e8319bc5-7c65-4ad5-898d-7dcfb385da92">TOWERLAMP</Type>
+      <From>TowerLamp</From>
+      <To>POU_Output</To>
+    </RenamedType>
+  </Renames>
+</Refactors>

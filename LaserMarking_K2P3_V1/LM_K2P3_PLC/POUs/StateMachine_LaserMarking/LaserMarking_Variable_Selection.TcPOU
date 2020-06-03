@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
+  <POU Name="LaserMarking_Variable_Selection" Id="{6e9c51ea-65b6-4e4f-8cba-cf61000ffbfe}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM LaserMarking_Variable_Selection
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="LaserMarking_Variable_Selection">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

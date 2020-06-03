@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <GVL Name="GVL_IO" Id="{06200b68-269a-4733-850f-28f3f438f634}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+
+
+//*********INPUT MODULE EL1809 -1 ***********
+
+Start_PB_IX00  			AT%IX0.0  :  BOOL;    //Start Push Button
+Stop_PB_IX01  			AT%IX0.1  :  BOOL;    //Stop Push Button
+Emg_PB_IX02 			AT%IX0.2  :  BOOL;    //Emergency Stop Push Button
+AutoMan_SelSw_IX03 		AT%IX0.3  :  BOOL;    //Auto / Manual Selector Switch
+FwdMotion_SelSw_IX04	AT%IX0.4  :  BOOL;    //Forward Selector Switch
+RevMotion_SelSw_IX05 	AT%IX0.5  :  BOOL;    //Reverse Selector Switch
+LaserOn_PB_IX06 		AT%IX0.6  :  BOOL;    //Laser ON
+FwdLimit_Prxy_IX07 		AT%IX0.7  :  BOOL;    //Forward Limit Proxy
+
+RevLimit_Prxy_IX10 		AT%IX1.0  :  BOOL;    //Reverse Limit / Home Proxy
+
+
+//*********OUTPUT MODULE EL2809 -1 ***********
+
+Start_PBLamp_QX00 		AT%QX0.0  :  BOOL;    //Start Push Button (IX0.0) Light
+LaserOn_PBLamp_QX01 	AT%QX0.1  :  BOOL;    //Laser ON Push Button (IX0.6) Light
+Red_TwrLamp_QX02 		AT%QX0.2  :  BOOL;    //Tower Lamp - Red Light
+Green_TwrLamp_QX03 		AT%QX0.3  :  BOOL;    //Tower Lamp - Green Light
+Amber_TwrLamp_QX04 		AT%QX0.4  :  BOOL;    //Tower Lamp - Amber Light
+
+
+
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

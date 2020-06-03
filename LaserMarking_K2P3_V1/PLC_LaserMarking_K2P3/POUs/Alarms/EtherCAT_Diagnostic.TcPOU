@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
+  <POU Name="EtherCAT_Diagnostic" Id="{a1ab0ab1-8b2f-4cab-a848-d78f1962c48c}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM EtherCAT_Diagnostic
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="EtherCAT_Diagnostic">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
