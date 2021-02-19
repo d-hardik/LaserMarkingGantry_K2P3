@@ -1,15 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
   <POU Name="Main" Id="{7de81d17-9477-439d-b1f6-5157a4a2df6c}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM Main
 VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[//Main POU Folder
+POU_GatewaySignals();
+POU_Manual_Auto();
+POU_Output();
+
+//Alarms Folder
+Alarm_Display_ST();
+Alarm_Display_ST();
+EtherCAT_Diagnostic();
+
+//StateMachine_AutoManual Folder
+AutoStates_POU();
+
+//StateMachine_MC_Axis Folder
+MC_State_MC();
+
+//StateMachine_LaserMarking Folder
+LaserMarking_Variable_Selection();
+LM_State_MC_TCP();
+]]></ST>
     </Implementation>
     <LineIds Name="Main">
+      <LineId Id="12" Count="0" />
       <LineId Id="5" Count="0" />
+      <LineId Id="9" Count="1" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="16" Count="2" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="26" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

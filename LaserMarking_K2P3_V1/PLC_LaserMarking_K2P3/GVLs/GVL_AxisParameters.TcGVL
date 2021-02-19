@@ -3,17 +3,23 @@
   <GVL Name="GVL_AxisParameters" Id="{da0a98cc-5f2c-40bb-8215-c25d4e8a5867}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
-	YAxisAutoSpeed  		:  LREAL;    			//
-	YAxisManualSpeed  		:  LREAL;    			//
-	YAxisManualStep  		:  BOOL := FALSE;    	//Step vise movement in Manual Mode
-	YAxisManualStepDistFwd 	:  LREAL := 100;    	//Distance to move in Step mode Forward Movement
-	YAxisManualStepDistRev 	:  LREAL := -100;    	//Distance to move in Step mode Reverse Movement
-	YAxisAcceleration  		:  LREAL := 100;    	//
-	YAxisDeceleration  		:  LREAL := 100;    	//
-	YAxisEmgDeceleration  	:  LREAL := 1000; 	   	//
-	YAxisJerk  :  LREAL 	:= 100;    				//
-	YAxisResetOnStop  		:  BOOL := TRUE;    	//
+	YAxisAutoSpeed  		:  	LREAL;    			//
+	YAxisManualSpeed  		:  	LREAL;    			//
+	YAxisManualStep  		:  	BOOL := FALSE;    	//Step vise movement in Manual Mode
+	YAxisManualStepDistFwd 	:  	LREAL := 100;    	//Distance to move in Step mode Forward Movement
+	YAxisManualStepDistRev 	:  	LREAL := -100;    	//Distance to move in Step mode Reverse Movement
+	YAxisAcceleration  		:  	LREAL := 100;    	//
+	YAxisDeceleration  		:  	LREAL := 100;    	//
+	YAxisEmgDeceleration  	:	LREAL := 1000; 	   	//
+	YAxisJerk  :  LREAL 	:= 	100;    			//
+	YAxisResetOnStop  		:	BOOL := TRUE;    	//
 
+	YAxis 					:	AXIS_REF;			// 
+	fbMC_Power				: 	MC_Power;			// Axis Power	
+	fbMC_Reset				: 	MC_Reset;
+	fbMC_Jog				:	MC_Jog;
+	fbMC_Home				:	MC_Home;
+	fbMC_MoveAbs			: 	MC_MoveAbsolute;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

@@ -2,11 +2,15 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
   <GVL Name="GVL_LaserMarking_MC_Parameters" Id="{0fc463a7-61bd-4110-9b50-a5069718e58c}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
-VAR_GLOBAL
+
+VAR_GLOBAL CONSTANT
 
 //Master Parameters
 
 LM_MachineID  			:  UINT := 1;    					//
+END_VAR
+
+VAR_GLOBAL
 LM_Type  				:  eMarking_Types := DataMatrix_2D;	//Type of Value to Mark
 LM_UniqueTec  			:  eUniquenessMethos := PartCode; 	//Uniqueness Method
 
@@ -26,11 +30,16 @@ LM_Con_Ready  			:  BOOL;    		//LM Ready State Machine is Ready without any err
 
 //Marking Values 
 
-LM_Production_Count  	:  ULINT;    						//Long_Production_Count
 LM_Marking_String  		:  STRING[32] := 'GODREJ MACHINE ID, PARTNAME';    //
 LM_WorkOrder_No  		:  STRING[32] := 'PLN00000';    	//
-LM_WorkOrder_Qty_Instance  :  UINT := 1;    				//
+END_VAR
 
+VAR_GLOBAL RETAIN
+LM_Production_Count  	:  ULINT;    						//Long_Production_Count
+LM_WorkOrder_Qty_Instance  :  UINT := 1;    				//
+END_VAR
+
+VAR_GLOBAL
 // Command Structure
 
 LM_CodeSelection_Enable  	:  BOOL := FALSE;    //If Enable, different different codes can be selected by resetting code selection done bit. if disabled initial value to be contant 
